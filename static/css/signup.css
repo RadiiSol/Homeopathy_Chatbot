@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.15rem;
+
+}
+
+/* body {
+    background-color: red;
+} */
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 60vh;
+    min-width: 30vw;
+    background: #2a7fba;
+    color: #fff;
+    border-radius: 15px;
+    position: relative;
+    top: 20vh;
+}
+
+.middle {
+    width: 280px;
+    position: relative;
+}
+
+.label {
+    position: relative;
+    left: 10px;
+    top: -35px;
+    transition: all 0.2s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #b3b3b3;
+    user-select: none;
+}
+
+.text-input {
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #1c1c1c;
+    background: #1c1c1c;
+    outline: none;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.label::before {
+    content: '';
+    height: 8px;
+    background: #1c1c1c;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 100%;
+    z-index: -1;
+}
+
+.text-input:focus {
+    border: 2px solid #38f2ff;
+}
+
+.text-input:focus+.label {
+    top: -60px;
+    color: #38f2ff;
+    font-size: 18px;
+    text-shadow: 1.5px 1px 2px rgba(8, 8, 8, 0.493);
+}
+
+.text-input::placeholder {
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.text-input:focus::placeholder {
+    opacity: 1;
+}
+
+.text-input:not(:placeholder-shown)+.label {
+    top: -62px;
+    color: #38f2ff;
+    font-size: 18px;
+}
+
+h2 {
+    margin: 25px;
+}
+
+.bottom p {
+    font-size: smaller;
+    margin: 15px;
+    color: aquamarine;
+}
+
+.bottom p a {
+    text-decoration: none;
+    font-style: italic;
+    color: #95a3e0;
+}
+
+.bottom p a:hover {
+    text-shadow: 0 0 25px #5ddcff,
+        0 0 50px #4e00c2;
+    ;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom button {
+    padding: 10px;
+    border-radius: 12px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    border: 3px solid #3c67e3;
+    margin-bottom: 20px;
+}
+
+.bottom button:hover {
+    animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow:
+            0 0 25px #5ddcff,
+            0 0 50px #4e00c2;
+    }
+}
+
+svg {
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
+    z-index: -2;
+}
