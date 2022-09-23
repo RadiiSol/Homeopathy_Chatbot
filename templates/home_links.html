@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <h3> Welcome User, You are logged in....</h3>
+    {% endif %}
+    <a href='accounts/login'>Click here to LOGIN..</a> <br> 
+    <a href='accounts/signup'>Click here to SIGNUP as PATIENT..</a><br>
+    <a href='accounts/doctor_signup'>Click here to SIGNUP as DOCTOR..</a><br>
+    <a href='accounts/patientprofile'>Click here to see a Patient's Profile..</a><br>
+    <a href='accounts/doctorprofile'>Click here to see a Doctor's Profile..</a>
+</body>
+
+</html>
