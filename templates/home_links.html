@@ -9,14 +9,16 @@
 </head>
 
 <body>
-    {% if user.is_authenticated %}
+    {% if request.user.is_authenticated %}
     <h3> Welcome User, You are logged in....</h3>
+    <a href="{% url 'signout' %}">Click here to LOGOUT..</a> <br><br>
+    {% else %}
+    <a href="{% url 'login' %}">Click here to LOGIN..</a> <br> 
     {% endif %}
-    <a href='accounts/login'>Click here to LOGIN..</a> <br> 
-    <a href='accounts/signup'>Click here to SIGNUP as PATIENT..</a><br>
-    <a href='accounts/doctor_signup'>Click here to SIGNUP as DOCTOR..</a><br>
-    <a href='accounts/patientprofile'>Click here to see a Patient's Profile..</a><br>
-    <a href='accounts/doctorprofile'>Click here to see a Doctor's Profile..</a>
+    <a href="{% url 'signup' %}">Click here to SIGNUP as PATIENT..</a><br>
+    <a href="{% url 'doctor_signup' %}">Click here to SIGNUP as DOCTOR..</a><br>
+    <a href="{% url 'showPatientProfile' %}">Click here to see a Patient's Profile..</a><br>
+    <a href="{% url 'showDoctorProfile' %}">Click here to see a Doctor's Profile..</a>
 </body>
 
 </html>
