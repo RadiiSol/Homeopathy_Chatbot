@@ -1,3 +1,4 @@
+from collections import UserString
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib.auth.models import User
@@ -194,12 +195,16 @@ def showDoctorProfile(request):
     if request.method == "POST":
         username = request.POST["username"]
         if models.User.objects.filter(username=username):
-            user_details = models.User.objects.get(username=username)
-            alldetails = models.Doctor_Profile.objects.get(user=user_details)
+            user_details = models.User.objects.filter(username=username)
+            if len(user_details) != 0:
+                alldetails = models.Doctor_Profile.objects.filter(user=user_details[0])
+                if len(alldetails) != 0:
+                    return render(request, "doctor_details.html", {"alldetails": alldetails[0]})
+                else:
+                    return HttpResponse("User is not a doctor")    
         else:
             return HttpResponse("Username NOT FOUND")
 
-        return render(request, "doctor_details.html", {"alldetails": alldetails})
     return render(request, "getDoctorProfile.html")
     
 
@@ -222,7 +227,12 @@ def showPatientProfile(request):
             "email": "",
             "contact": ""
         }
+
+        username=request.POST['username']
         userobjects = User.objects.filter(username=request.POST['username'])
+        user_obj = models.Patient_Medical_History.objects.filter(user=userobjects[0])
+        if not user_obj:
+            return HttpResponse("User is not PATIENT")
 
         if len(userobjects) != 0:
             patient = userobjects[0]
