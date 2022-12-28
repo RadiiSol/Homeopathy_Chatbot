@@ -1,0 +1,236 @@
+{
+    "Q2": {
+        "Head": [],
+        "Upper Extremities": ["Arm", "Shoulder", "Elbow"],
+        "Lower Extremities": []
+    },
+
+    "Q3": {
+        "Shoulder": ["Pain"],
+        "Forehead": [],
+        "Hand": []
+    },
+
+    "Q4": {
+        "Shoulder": {
+            "Pain": {
+                "question": "On which side it is present?",
+                "options": ["Shoulder -> Deltoid -> Left", "Shoulder -> Deltoid -> Right", "Shoulder"],
+                "is_rubrics": "True",
+                "where": "Upper Extremities -> Locations"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q5": {
+        "Shoulder": {
+            "Pain": {
+                "question": "How did it begin?",
+                "options": ["Sudden", "Gradual"],
+                "is_rubrics": "False",
+                "where": "null"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q6": {
+        "Shoulder": {
+            "Pain": {
+                "question": "Since how long it is present?",
+                "options": ["Days", "Weeks", "Months", "Years"],
+                "is_rubrics": "False",
+                "where": "null"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q7": {
+        "Shoulder": {
+            "Pain": {
+                "question": "Is there any history of trauma preceding its onset?",
+                "options": ["Yes", "No"],
+                "is_rubrics": "False",
+                "where": "null"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q8": {
+        "Shoulder": {
+            "Pain": {
+                "question": "How do you describe its severity?",
+                "options": ["Mild", "Moderate", "Severe"],
+                "is_rubrics": "False",
+                "where": "null"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q9": {
+        "Shoulder": {
+            "Pain": {
+                "question": "Does it extend to any other area?",
+                "options": ["Back extending into", "Chest ,extending into", "Upward ,pains go", " Outward extending", "No"],
+                "is_rubrics": "True",
+                "where": "Upper Extremities -> Sensations"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q10": {
+        "Shoulder": {
+            "Pain": {
+                "question": "How often do you consume pain killer?",
+                "options": ["Never", "Rare", "Occasional", "Everyday"],
+                "is_rubrics": "False",
+                "where": "null"
+            }
+        },
+            "Stiffness": {
+            
+            },
+            "Arm": {
+
+            },
+            "Hand": {
+
+            }
+    },
+
+    "Q11": {
+        "Shoulder": {
+            "Pain": {
+                "question": "What term can best describe the pain?",
+                "options": ["Pain, Simple->shoulder", "Beaten ,bruised as if->shoulder", "Blows ,thrusts->pain as of", "Boring->shoulder", "Breaking ,pain as if", "Bruised as if", "Burnt ,pain as if", "Burrowing", "Bursting as if", "Crampy feeling in", "Crushed, pain as if->shoulder", "Cutting and sharp pain->shoulder", "Darting", "Drawing->shoulder", "Dull pain", "Excoriative pain", "Fatigue like pain", "Festering Pain", "Gnawing->shoulder", "Griping,Clutching", "Lameness,Laming pain,etc.->shoulder", "Pinching->shoulder", "Prickling->shoulder", "Rending", "Rheumatic Pain", "Scraping on bones, as if", "Shocks->shoulder", "Shootings", "Smarting", "Soreness,Painful or ulcerative", "Spasmodic pain", "Splinter feeling of a", "Sprained or dislocative pain->shoulder", "Squeezing,compression->shoulder", "Stitches,Sticking->shoulder", "Tearing->shoulder", "Tension->shoulder", "Throbbing,beating->shoulder", "Thrusting pain->shoulder", "Twisting ,Wrenching feeling", "Ulcerative pain", "Weariness,weary pain", "Wedge in shoulder as of a", "Wrenching"],
+                "is_rubrics": "True",
+                "where": "Upper Extremities -> Sensations"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q12": {
+        "Shoulder": {
+            "Pain": {
+                "question": "At what time of day it increases?",
+                "options": ["Morning", "Morning->every other", "Forenoon", "Afternoon", "Evening", "Night", "Midnight", "Midnight->before", "Midnight->after"],
+                "is_rubrics": "False",
+                "where": "null"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q13": {
+        "Shoulder": {
+            "Pain": {
+                "question": "What  factors increase it?",
+                "options": {
+                    "Related to eating: ": ["Acids, after", "Alcoholism", "Breakfast, after"],
+                    "Related to position/motion: ": []
+                },
+                "is_rubrics": "False",
+                "where": "null"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q15": {
+        "Shoulder": {
+            "Pain": {
+                "What factors increase it?": {
+                    "A. Related to Eating": [],
+                    "B. Related to Position/Motion": []
+                }
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions</title>
+  </head>
+
+  <body>
+    <form method="POST" action="" id="questionform">
+      {% csrf_token %} Your Case Sheet Name: {{returndict.casesheetname}}
+      <br /><br />< {{returndict.question}}<br /><br />
+
+      {% for option in returndict.options %}
+      <input type="radio" name="selectedoption" value="{{option}}" /> {{option}}
+      <br />
+      {% endfor %}<br />
+
+      <button onclick="updateAction()">Submit</button>
+
+      <!-- HIDDEN INPUT  transferring casesheetname-->
+      <input
+        type="text"
+        value="{{returndict.casesheetname}}"
+        name="currentscasesheetname"
+        style="display: none"
+      />
+    </form>
+
+    <script>
+      function updateAction() {
+        var fname = document.getElementById("questionform");
+        var qname = "{{returndict.question_name}}";
+        var actionlink = "{% url 'go_home' %}" + "main/" + qname + "/";
+        fname.action = actionlink;
+        fname.submit();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewCaseSheet</title>
+  </head>
+
+  <body>
+    <form method="POST" action="{%url 'createcasesheet'%}">
+      {% csrf_token %}
+
+      <h2>{{casesheetname}}</h2>
+      {% if error_message %}
+      <input type="hidden" value="{{casesheetname}}" name="casesheetnameconfirm">
+      <label> {{error_message}} <br>
+      <input type="button"  onclick="history.back()" value="No">
+      <input type="submit" name="updateCase" action="{%url 'createcasesheet'%}" value="Yes" >
+
+      {% else %}
+      <input
+      type="text"
+      name="casesheetname"
+      placeholder="Enter the name of your case sheet"
+      />
+      <button name="newCase">Submit</button>
+      {% endif %}
+    </form>
+  </body>
+</html>

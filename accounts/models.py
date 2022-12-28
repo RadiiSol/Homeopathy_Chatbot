@@ -1,6 +1,9 @@
+from unittest.util import _MAX_LENGTH
 from django.db.models.deletion import CASCADE
 from django.db import models
 from django.contrib.auth.models import User
+from jsonfield import JSONField
+import jsonfield
 
 
 class Patient_Medical_History(models.Model):
@@ -39,7 +42,7 @@ class Medical_Narcotics_Sports_History(models.Model):
 class Doctor_Profile(models.Model):
     user = models.OneToOneField(User, on_delete=CASCADE, primary_key=True)
     specialization = models.CharField(default="None", max_length=20)
-    Qualification = models.CharField(default="MBBS", max_length=20)
+    Qualification = models.CharField(default="BHMRC", max_length=20)
     hospitalname = models.CharField(
         default="Bharati Vidyapeeth Homeopathy Hospital", max_length=100)
 

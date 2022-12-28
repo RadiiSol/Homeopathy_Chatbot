@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.go_home, name="go_home"),
     path('accounts/', include('accounts.urls')),
+    path('main/', include('main.urls'))
 ]

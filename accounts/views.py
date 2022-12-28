@@ -58,6 +58,7 @@ def narcotics_historytoDB(narcotics_history_list):
 def go_home(request):
     return render(request, "home_links.html")
 
+
 def login(request):
     if request.method == "POST":
         info = request.POST['info']
@@ -155,9 +156,10 @@ def signup(request):
     else:
         return render(request, "signup.html")
 
+
 def doctor_signup(request):
     if request.method == "POST":
-        
+
         first_name = request.POST['firstname']
         last_name = request.POST['lastname']
 
@@ -184,12 +186,13 @@ def doctor_signup(request):
             username=username, first_name=first_name, last_name=last_name, email=email, password=password)
         new_user.save()
 
-        doctor_profile = models.Doctor_Profile.objects.create(user=new_user, specialization=specialization, Qualification=qualification, hospitalname=hospital_name)
+        doctor_profile = models.Doctor_Profile.objects.create(
+            user=new_user, specialization=specialization, Qualification=qualification, hospitalname=hospital_name)
         doctor_profile.save()
 
-        
         return redirect("go_home")
     return render(request, "doctor_signup.html")
+
 
 def showDoctorProfile(request):
     if request.method == "POST":
@@ -197,16 +200,16 @@ def showDoctorProfile(request):
         if models.User.objects.filter(username=username):
             user_details = models.User.objects.filter(username=username)
             if len(user_details) != 0:
-                alldetails = models.Doctor_Profile.objects.filter(user=user_details[0])
+                alldetails = models.Doctor_Profile.objects.filter(
+                    user=user_details[0])
                 if len(alldetails) != 0:
                     return render(request, "doctor_details.html", {"alldetails": alldetails[0]})
                 else:
-                    return HttpResponse("User is not a doctor")    
+                    return HttpResponse("User is not a doctor")
         else:
             return HttpResponse("Username NOT FOUND")
 
     return render(request, "getDoctorProfile.html")
-    
 
 
 def showPatientProfile(request):
@@ -228,9 +231,10 @@ def showPatientProfile(request):
             "contact": ""
         }
 
-        username=request.POST['username']
+        username = request.POST['username']
         userobjects = User.objects.filter(username=request.POST['username'])
-        user_obj = models.Patient_Medical_History.objects.filter(user=userobjects[0])
+        user_obj = models.Patient_Medical_History.objects.filter(
+            user=userobjects[0])
         if not user_obj:
             return HttpResponse("User is not PATIENT")
 

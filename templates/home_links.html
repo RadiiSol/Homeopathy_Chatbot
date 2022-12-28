@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     {% if request.user.is_authenticated %}
-    <h3> Welcome User, You are logged in....</h3>
-    <a href="{% url 'signout' %}">Click here to LOGOUT..</a> <br><br>
+    <h3>Welcome {{request.user.get_full_name}}, You are logged in....</h3>
+    <a href="{% url 'signout' %}">Click here to LOGOUT..</a> <br /><br />
     {% else %}
-    <a href="{% url 'login' %}">Click here to LOGIN..</a> <br> 
+    <a href="{% url 'login' %}">Click here to LOGIN..</a> <br />
     {% endif %}
-    <a href="{% url 'signup' %}">Click here to SIGNUP as PATIENT..</a><br>
-    <a href="{% url 'doctor_signup' %}">Click here to SIGNUP as DOCTOR..</a><br>
-    <a href="{% url 'showPatientProfile' %}">Click here to see a Patient's Profile..</a><br>
-    <a href="{% url 'showDoctorProfile' %}">Click here to see a Doctor's Profile..</a>
-</body>
-
+    <a href="{% url 'signup' %}">Click here to SIGNUP as PATIENT..</a><br />
+    <a href="{% url 'doctor_signup' %}">Click here to SIGNUP as DOCTOR..</a
+    ><br />
+    <a href="{% url 'showPatientProfile' %}"
+      >Click here to see a Patient's Profile..</a
+    ><br />
+    <a href="{% url 'showDoctorProfile' %}"
+      >Click here to see a Doctor's Profile..</a
+    >
+    <a href="{% url 'createcasesheet' %}"
+      >Click here to create a new casesheet..</a
+    >
+  </body>
 </html>
