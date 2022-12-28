@@ -14,7 +14,7 @@
     "Q4": {
         "Shoulder": {
             "Pain": {
-                "question": "On which side it is present?",
+                "question": "Q4. On which side it is present?",
                 "options": ["Shoulder -> Deltoid -> Left", "Shoulder -> Deltoid -> Right", "Shoulder"],
                 "is_rubrics": "True",
                 "where": "Upper Extremities -> Locations"
@@ -34,7 +34,7 @@
     "Q5": {
         "Shoulder": {
             "Pain": {
-                "question": "How did it begin?",
+                "question": "Q5. How did it begin?",
                 "options": ["Sudden", "Gradual"],
                 "is_rubrics": "False",
                 "where": "null"
@@ -54,7 +54,7 @@
     "Q6": {
         "Shoulder": {
             "Pain": {
-                "question": "Since how long it is present?",
+                "question": "Q6. Since how long it is present?",
                 "options": ["Days", "Weeks", "Months", "Years"],
                 "is_rubrics": "False",
                 "where": "null"
@@ -74,7 +74,7 @@
     "Q7": {
         "Shoulder": {
             "Pain": {
-                "question": "Is there any history of trauma preceding its onset?",
+                "question": "Q7. Is there any history of trauma preceding its onset?",
                 "options": ["Yes", "No"],
                 "is_rubrics": "False",
                 "where": "null"
@@ -94,7 +94,7 @@
     "Q8": {
         "Shoulder": {
             "Pain": {
-                "question": "How do you describe its severity?",
+                "question": "Q8. How do you describe its severity?",
                 "options": ["Mild", "Moderate", "Severe"],
                 "is_rubrics": "False",
                 "where": "null"
@@ -114,8 +114,8 @@
     "Q9": {
         "Shoulder": {
             "Pain": {
-                "question": "Does it extend to any other area?",
-                "options": ["Back extending into", "Chest ,extending into", "Upward ,pains go", " Outward extending", "No"],
+                "question": "Q9. Does it extend to any other area?",
+                "options": ["Back extending into", "Chest ,extending into", "Upward ,pains go", " Outward extending", "None of the above"],
                 "is_rubrics": "True",
                 "where": "Upper Extremities -> Sensations"
             },
@@ -134,7 +134,7 @@
     "Q10": {
         "Shoulder": {
             "Pain": {
-                "question": "How often do you consume pain killer?",
+                "question": "Q10. How often do you consume pain killer?",
                 "options": ["Never", "Rare", "Occasional", "Everyday"],
                 "is_rubrics": "False",
                 "where": "null"
@@ -154,7 +154,7 @@
     "Q11": {
         "Shoulder": {
             "Pain": {
-                "question": "What term can best describe the pain?",
+                "question": "Q11. What term can best describe the pain?",
                 "options": ["Pain, Simple->shoulder", "Beaten ,bruised as if->shoulder", "Blows ,thrusts->pain as of", "Boring->shoulder", "Breaking ,pain as if", "Bruised as if", "Burnt ,pain as if", "Burrowing", "Bursting as if", "Crampy feeling in", "Crushed, pain as if->shoulder", "Cutting and sharp pain->shoulder", "Darting", "Drawing->shoulder", "Dull pain", "Excoriative pain", "Fatigue like pain", "Festering Pain", "Gnawing->shoulder", "Griping,Clutching", "Lameness,Laming pain,etc.->shoulder", "Pinching->shoulder", "Prickling->shoulder", "Rending", "Rheumatic Pain", "Scraping on bones, as if", "Shocks->shoulder", "Shootings", "Smarting", "Soreness,Painful or ulcerative", "Spasmodic pain", "Splinter feeling of a", "Sprained or dislocative pain->shoulder", "Squeezing,compression->shoulder", "Stitches,Sticking->shoulder", "Tearing->shoulder", "Tension->shoulder", "Throbbing,beating->shoulder", "Thrusting pain->shoulder", "Twisting ,Wrenching feeling", "Ulcerative pain", "Weariness,weary pain", "Wedge in shoulder as of a", "Wrenching"],
                 "is_rubrics": "True",
                 "where": "Upper Extremities -> Sensations"
@@ -174,7 +174,7 @@
     "Q12": {
         "Shoulder": {
             "Pain": {
-                "question": "At what time of day it increases?",
+                "question": "Q12. At what time of day it increases?",
                 "options": ["Morning", "Morning->every other", "Forenoon", "Afternoon", "Evening", "Night", "Midnight", "Midnight->before", "Midnight->after"],
                 "is_rubrics": "False",
                 "where": "null"
@@ -194,10 +194,38 @@
     "Q13": {
         "Shoulder": {
             "Pain": {
-                "question": "What  factors increase it?",
+                "question": "Q13. What factors increase it?",
                 "options": {
-                    "Related to eating: ": ["Acids, after", "Alcoholism", "Breakfast, after"],
-                    "Related to position/motion: ": []
+                    "Related to eating: ": ["Acids, after", "Alcoholism", "Breakfast, after", "Eating", "Hunger, ravenous, during"],
+                    "Related to position/motion: ": ["Ascending", "Backward, moving arm", "Bed, in", "Bending or turning the limb", "Bent, holding it", "Closing hands", "Grasping objects", "Hang down, letting arm", "Holding fast to objects", "Laying arm", "Lifting weights", "Lying", "Knitting", "Motion, in general", "Propping or leaning upon", "Raising arms", "Rest", "Rising from", "Sitting", "Still, holding arms", "Stooping", "Stretching out limb", "Piano, playing", "Standing", "Walking", "Writing"],
+                    "Related to sleep: ": ["Awaking, on", "Sleep, during", "Yawning"],
+                    "Feelings related: ": ["Emotions", "Fright", "Laughing"],
+                    "Related to pressure/touch: ": ["Air, open, in", "Cold", "Dampness", "East wind(dry)", "Overheated, being", "Walking", "Warm, becoming", "Warmth, from", "Weather, rough, during", "Window, when at", "Winter, in"],
+                    "Other: ": ["Covering ,from", "Coughing", "Feather bed, in", "Injury, after", "Inspiration", "Menses", "Pollutions, after", "Sneezing", "Shears, cutting with", "Talking", "Uncovering", "Washing, after", "Water, pouring over part", "Alternating sides", "Breathing", "None of the above"]
+                },
+                "is_rubrics": "True",
+                "where": "null"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q14": {
+        "Shoulder": {
+            "Pain": {
+                "question": "Q14. What factors decrease it?",
+                "options": {
+                    "Related to position: ": ["Bending (turning) limb", "Grasping an object", "Hang down,letting arms", "Knitting", "Lying", "Raising", "Rest", "Rising from", "Separating arms from body", "Sitting", "Standing", "Stretching out arms", "Wrapping up the hands"],
+                    "Related to temperature/weather: ": ["Walking in open air", "warm", " warmth from"],
+                    "Other: ": ["Bathing Finger tips", "Covering", "Eructation, after", "Licking with tongue", "Moistening the part", "Motion", "Pinching Finger tips", "Pressure external", "Room, in", "Rubbing", "Scratching", "Stool after", "Sweat after", "Touch", "Uncovering", "Washing", "Water"]
                 },
                 "is_rubrics": "False",
                 "where": "null"
@@ -217,10 +245,15 @@
     "Q15": {
         "Shoulder": {
             "Pain": {
-                "What factors increase it?": {
-                    "A. Related to Eating": [],
-                    "B. Related to Position/Motion": []
-                }
+                "question": "Q15. What factors decrease it?",
+                "options": {
+                    "Habit related: ": ["Beating about with", "bites his fingers (nails)", "clenched, hand", "clutching", "digging, tip of thumb", "Grasps hurriedly", "Pecking finger", "Picks at ,finger", "Plays with his fingers and hands", "Restlessness and movements of ", "Shrugging", "Spread apart ,fingers", "Striking about ", "Sucking the thumb", "Tossing arms", "Turn", "Wringing hands", "Pressing together"],
+                    "Sensation related: ": ["Asleep feeling ", "Awkward", "Alive, sensation as of something", "Band about ,", "Benumbed feeling", "Blood", "Bubbling,gushing,welling up", "Buzzing", "creeping as of an insect", "Cobweb sensation","Crawling", "Crossed as if,finger", "Deadness", "Distended ,as if ", "Distortion sensation of,in bones","Drawn", "Dryness", "Enlarging ,as if", "Elongated feeling ,fingers", "Empty","Flowing like water", "Foreign body as of a ,finger", "Full feeling in ", "Hair on,", "Hammering,bones","Heat sense of in", "Heaviness", "Humming in", "Higher ,shoulder feels", "Loose ,on bones ,as if flesh were","Nervous feeling in", "Numb,deadness ", "Plug ,as of a ,shoulder", "Powerlessness", "Pressure","Quivering", "Raw as if", "Rigid, feeling in", "Rolling down sensation in", "Rumbling,rattling as of water,elbow","Shorter arm feels", "stiffness and heavy", "Strength feeling of ", "Swollen(and as if)", "Torn off ,as if ","Torn,ligaments ,as if ,joints shoulder", "Trickling like drops of water", "Tickling", "Thicker seemingly", "Tingling and tickling, palms","tremulous sensation", "Vibration in", "warmth sense of", "Wind blowing on,as of a cold", "Wooden ,sensation as if"],
+                    "Other: ": ["Bleeding easily ", "Blueness of skin", "Coldness", "Contraction", "Convulsions,clonic spasms", "Chill,Arm", "Chilliness ,Finger", "Constriction,joint Elbow", "Cramp", "Cracking", "Creaking shoulder joint", "Dryness of skin", "Dryness", "Erysipelas", "excoriation of", "Dislocation easy", "Dropsy", "Frostbite;chillblains ", "Ganglion,Hands", "Gangrene", "Gout,fingers", "Gray, turning", "Helplessness of ", "immobility", "Indentations pressure leaves,fingers", "Inflexibility of wrist", "Insensibility", "Itch vesicles", "Jerks and twitches", "Motion Convulsive", "Mottled", "Neuralgia of ", "Pale finger", "Pulsation", "Redness", "Roughness of ", "Sensitive", "shaking", "snapping", "Spasm", "Sticky", "Sweaty", "Tactile sense lost", "Thrusts,blows etc", "Trembling ,arm", "Twitching ,jerking (muscular) shoulder", "white turning", "Shrivelled hands", "Withered skin of", "wrinkled skin", "Yellow"],
+                    "Structural problem: ": ["Drooping of", "Hardness of muscles ,arm", "Inversion", "Nodes ,arthritic", "Elevated shoulder", "Swelling nodes and bumps", "Veins distended", "shoulder ,elevation of", "Atrophy", "Crusts in", "Distortion", "Dropping off of fingers(gangrenous)", "Elevations in skin", "Emaciation", "Desquamation", "Hard skin on ", "Rigid ,immobile ", "Shortening of tendons", "Thumbs flexed into palms"]
+                },
+                "is_rubrics": "False",
+                "where": "null"
             },
             "Stiffness": {
 
@@ -231,6 +264,46 @@
         },
         "Hand": {
 
+        }
+    },
+
+    "Q16": {
+        "Shoulder": {
+            "Pain": {
+                "question": "Q17. How does it appear?",
+                "options": ["twinges", "Alternating from one side to the other side", "wave like pain", "transverse pains"],
+                "is_rubrics": "False",
+                "where": "null"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+
+        }
+    },
+
+    "Q17": {
+        "Shoulder": {
+            "Pain": {
+                "question": "Q17. When does it occur?",
+                "options": ["Flexing and extending part", "Rotation of", "Extension of"],
+                "is_rubrics": "False",
+                "where": "null"
+            },
+            "Stiffness": {
+
+            }
+        },
+        "Arm": {
+
+        },
+        "Hand": {
+            
         }
     }
 }

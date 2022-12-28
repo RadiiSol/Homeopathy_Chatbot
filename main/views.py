@@ -201,4 +201,381 @@ def question6(request):
         else:
             return HttpResponse("Something went wrong!!!")
 
-        return redirect("question6")
+        return redirect("question7")
+
+
+def question7(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        returndict = {
+            "question": data["Q7"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "options": data["Q7"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"],
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question7"
+        }
+        return render(request, "question_type1.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST['selectedoption']
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q7=optionselected)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question8")
+
+
+def question8(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        returndict = {
+            "question": data["Q8"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "options": data["Q8"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"],
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question8"
+        }
+        return render(request, "question_type1.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST['selectedoption']
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q8=optionselected)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question9")
+
+
+def question9(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        returndict = {
+            "question": data["Q9"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "options": data["Q9"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"],
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question9"
+        }
+        return render(request, "question_type1.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST['selectedoption']
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q9=optionselected)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question10")
+
+
+def question10(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        returndict = {
+            "question": data["Q10"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "options": data["Q10"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"],
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question10"
+        }
+        return render(request, "question_type1.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST['selectedoption']
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q10=optionselected)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question11")
+
+
+def question11(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        returndict = {
+            "question": data["Q11"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "options": data["Q11"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"],
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question11"
+        }
+        return render(request, "question_type1.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST['selectedoption']
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q11=optionselected)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question12")
+
+
+def question12(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        returndict = {
+            "question": data["Q12"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "options": data["Q12"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"],
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question12"
+        }
+        return render(request, "question_type1.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST['selectedoption']
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        # checks if we got multiple casesheets of same name
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q12=optionselected)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question13")
+
+
+def question13(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        optionheadings = []
+        options = []
+
+        # for filling option-headings
+        for item in data["Q13"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"]:
+            optionheadings.append(item)
+
+        # for the filling the options under each option heading
+        for item in optionheadings:
+            options.append(data["Q13"][currentcasesheet[0].minorlocation]
+                           [currentcasesheet[0].problem]["options"][item])
+
+        returndict = {
+            "question": data["Q13"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "headingsWithOptions": zip(optionheadings, options),
+            "numberOfHeadings": len(options),
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question13"
+        }
+
+        return render(request, "question_type2.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST.getlist('selectedoption')
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        finalString = optionselected[0]  # stores what to put in DB
+
+        # putting all array values into one string
+        for item in range(1, len(optionselected)):
+            finalString += "$"
+            finalString += optionselected[item]
+
+        # checks if we got multiple casesheets of same name
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q13=finalString)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question14")
+
+
+def question14(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        optionheadings = []
+        options = []
+
+        # for filling option-headings
+        for item in data["Q14"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"]:
+            optionheadings.append(item)
+
+        # for the filling the options under each option heading
+        for item in optionheadings:
+            options.append(data["Q14"][currentcasesheet[0].minorlocation]
+                           [currentcasesheet[0].problem]["options"][item])
+
+        returndict = {
+            "question": data["Q14"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "headingsWithOptions": zip(optionheadings, options),
+            "numberOfHeadings": len(options),
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question14"
+        }
+
+        return render(request, "question_type2.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST.getlist('selectedoption')
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        finalString = optionselected[0]  # stores what to put in DB
+
+        # putting all array values into one string
+        for item in range(1, len(optionselected)):
+            finalString += "$"
+            finalString += optionselected[item]
+
+        # checks if we got multiple casesheets of same name
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q14=finalString)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question15")
+
+
+def question15(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        optionheadings = []
+        options = []
+
+        # for filling option-headings
+        for item in data["Q15"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"]:
+            optionheadings.append(item)
+
+        # for the filling the options under each option heading
+        for item in optionheadings:
+            options.append(data["Q15"][currentcasesheet[0].minorlocation]
+                           [currentcasesheet[0].problem]["options"][item])
+
+        returndict = {
+            "question": data["Q15"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "headingsWithOptions": zip(optionheadings, options),
+            "numberOfHeadings": len(options),
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question15"
+        }
+
+        return render(request, "question_type2.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST.getlist('selectedoption')
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        finalString = optionselected[0]  # stores what to put in DB
+
+        # putting all array values into one string
+        for item in range(1, len(optionselected)):
+            finalString += "$"
+            finalString += optionselected[item]
+
+        # checks if we got multiple casesheets of same name
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q15=finalString)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question16")
+
+
+def question16(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        returndict = {
+            "question": data["Q16"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "options": data["Q16"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"],
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question16"
+        }
+        return render(request, "question_type1.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST['selectedoption']
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        # checks if we got multiple casesheets of same name
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q16=optionselected)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("question17")
+
+
+def question17(request):
+    if request.method == 'GET':
+
+        currentcasesheet = Patient_Case_Sheet.objects.filter(
+            user=request.user, case_sheet_name=request.session.get("casesheetname"))
+
+        returndict = {
+            "question": data["Q17"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["question"],
+            "options": data["Q17"][currentcasesheet[0].minorlocation][currentcasesheet[0].problem]["options"],
+            "casesheetname": request.session.get("casesheetname"),
+            "question_name": "question17"
+        }
+        return render(request, "question_type1.html", {"returndict": returndict})
+    else:
+        optionselected = request.POST['selectedoption']
+        casesheetname = request.POST['currentscasesheetname']
+        currentuser = request.user
+        mappedcasesheets = Patient_Case_Sheet.objects.filter(
+            user=currentuser, case_sheet_name=casesheetname)
+
+        # checks if we got multiple casesheets of same name
+        if mappedcasesheets and len(mappedcasesheets) == 1:
+            mappedcasesheets.update(q17=optionselected)
+        else:
+            return HttpResponse("Something went wrong!!!")
+
+        return redirect("go_home")

@@ -8,15 +8,20 @@
   </head>
 
   <body>
-    <form method="POST" action="" id="questionform">
+    <form method="POST" action="{% url 'question13' %}" id="questionform">
       {% csrf_token %} Your Case Sheet Name: {{returndict.casesheetname}}
       <br /><br />
       {{returndict.question}}<br /><br />
 
-      {% for option in returndict.options %}
-      <input type="radio" name="selectedoption" value="{{option}}" /> {{option}}
+      {% for item in returndict.headingsWithOptions %}
+
       <br />
-      {% endfor %}<br />
+      {{item.0}}<br />
+      {%for option in item.1%}
+      <input type="checkbox" name="selectedoption" value="{{option}}" />
+      {{option}}
+      <br />
+      {%endfor%} {% endfor %}<br />
 
       <button onclick="updateAction()">Submit</button>
 
