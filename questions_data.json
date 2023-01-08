@@ -6,7 +6,7 @@
     },
 
     "Q3": {
-        "Shoulder": ["Pain"],
+        "Shoulder": ["Pain", "Stiffness"],
         "Forehead": [],
         "Hand": []
     },
@@ -204,7 +204,7 @@
                     "Other: ": ["Covering ,from", "Coughing", "Feather bed, in", "Injury, after", "Inspiration", "Menses", "Pollutions, after", "Sneezing", "Shears, cutting with", "Talking", "Uncovering", "Washing, after", "Water, pouring over part", "Alternating sides", "Breathing", "None of the above"]
                 },
                 "is_rubrics": "True",
-                "where": "null"
+                "where": "Upper Extremities -> Aggravations"
             },
             "Stiffness": {
 

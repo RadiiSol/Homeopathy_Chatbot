@@ -578,4 +578,27 @@ def question17(request):
         else:
             return HttpResponse("Something went wrong!!!")
 
+        get_medicine_scores(request.user, casesheetname)
         return redirect("go_home")
+
+
+# for medicine suggestions
+def get_medicine_scores(currentuser, casesheetname):
+    medicine_scores = {}
+    mappedcasesheets = Patient_Case_Sheet.objects.filter(
+        user=currentuser, case_sheet_name=casesheetname)
+
+    if(len(mappedcasesheets) > 1):
+        print("")
+        print("")
+        print("do something!!!")
+        print("")
+        print("")
+
+    print("")
+    print("")
+    print("hellow" + mappedcasesheets[0].majorlocation)
+    print("")
+    print("")
+
+    return
